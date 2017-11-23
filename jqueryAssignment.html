@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>jquery</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <meta charset="UTF-8">
+      <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+         $("#button_click").click(function(){
+            $("#clickText").hide();
+            });
+         $("#button_hide").click(function(){
+            $("#hideText").hide();
+            });
+         $("#button_show").click(function(){
+            $("#hideText").show();
+            });
+         $("#button_toggle").click(function(){
+            $("#toggleText").toggle();
+            });
+         $("#button_slideDown").click(function(){
+            $("#slideUpText").slideDown();
+            });
+         $("#button_slideUp").click(function(){
+            $("#slideUpText").slideUp();
+            });
+         $("#button_slideToggle").click(function(){
+            $("#slideToggleText").slideToggle();
+            });
+         $("#button_fadeIn").click(function(){
+            $("#fadeOutText").fadeIn();
+            });
+         $("#button_fadeOut").click(function(){
+            $("#fadeOutText").fadeOut();
+            });
+         $("#button_addClass").click(function(){
+            $("#addClassText").addClass("classToBeAdded");
+            });
+         $("#button_before").click(function(){
+            $("#beforeText").before("<p>HI</p>");
+            });
+         $("#button_after").click(function(){
+            $("#afterText").after("<p>Hello</p>");
+            });
+         $("#button_append").click(function(){
+            $("#appendText").append("<p> text has been appended </p>");
+            });
+         $("#button_html").click(function(){
+            $("#htmlText").html("button has been pressed.");
+            });
+         $("#button_attr").click(function(){
+            $("#button_attr").attr("style", "background-color: green");
+            });
+         $("#button_val").click(function(){
+            $("input:text").val("Tada!");
+            });
+         $("#button_text").click(function(){
+            $("#textText").text("button has been clicked");
+            });
+         $("#button_data1").click(function(){
+            $("#button_data1").data("JSInfo", "HELLO!!!");
+            });
+         $("#button_data2").click(function(){
+            alert($("#button_data1").data("JSInfo"));
+            });
+
+         })
+      </script>
+   </head>
+   <body>
+      <div class="box_click sampleBox">
+         <button class="behaviorButton" id="button_click">
+            display "click" behavior
+         </button>
+         <div class="boxText" id="clickText">
+           The click method is one mechanism of instigating an event (in this case, triggering the hide method)
+         </div>
+      </div>
+      
+      <div class="box_hide sampleBox">
+         <button class="behaviorButton" id="button_hide">
+            display "hide" behavior
+         </button>
+         <div class="boxText" id="hideText">
+            The hide method is an action that causes the targetted object to disappear
+         </div>
+      </div>
+      
+      <div class="box_show sampleBox">
+         <button class="behaviorButton" id="button_show">
+            display "show" behavior
+         </button>
+         <div class="boxText" id="showText">
+            The show method is an action that undoes the hide status. (In this case, this button will cause the text the above button hid to reappear.)
+         </div>
+      </div>
+      
+      <div class="box_toggle sampleBox">
+         <button class="behaviorButton" id="button_toggle">
+            display "toggle" behavior
+         </button>
+         <div class="boxText" id="toggleText">
+            the toggle behavior acts as either the hide or show action in that it'll hide shown objects and show hidden objects.
+         </div>
+      </div>
+      
+      <div class="box_slideDown sampleBox">
+         <button class="behaviorButton" id="button_slideDown">
+            display "slide down" behavior
+         </button>
+         <div class="boxText" id="slideDownText">
+            "slideDown()" acts like show() in that it shows a hidden object but, rather than an instant transition, the object grows from the top down (perhaps vertical-align: top; and height:0;?) see text in box below for behavior.
+         </div>
+      </div>
+      
+      <div class="box_slideUp sampleBox">
+         <button class="behaviorButton" id="button_slideUp">
+            display "slide up" behavior
+         </button>
+         <div class="boxText" id="slideUpText">
+            "slideUp()" is to "hide()" as "slideDown()" is to "show()". This text will be unhidden by the button above.
+         </div>
+      </div>
+      
+      <div class="box_slideToggle sampleBox">
+         <button class="behaviorButton" id="button_slideToggle">
+            display "slide toggle" behavior
+         </button>
+         <div class="boxText" id="slideToggleText">
+            Once again, this is pretty self explanatory; this is the equivalent of "toggleSlide()" for the slide behavior.
+         </div>
+      </div>
+      
+      <div class="box_fadeIn sampleBox">
+         <button class="behaviorButton" id="button_fadeIn">
+            display "fade in" behavior
+         </button>
+         <div class="boxText" id="fadeInText">
+            The fade behavior-type simply is an opacity transition either to or from transparent. The above button will show the below text after the below button is used to hide it. (noteably, there is a fadeToggle() method, however it is not being used in this sample page.
+         </div>
+      </div>
+      
+      <div class="box_fadeOut sampleBox">
+         <button class="behaviorButton" id="button_fadeOut">
+            display "fade out" behavior            
+         </button>
+         <div class="boxText" id="fadeOutText">
+            This text will fadeIn and fadeOut based on the above two buttons.
+         </div>
+      </div>
+      
+      <div class="box_addClass sampleBox">
+         <button class="behaviorButton" id="button_addClass">
+            display "add class" behavior
+         </button>
+         <div class="boxText" id="addClassText">
+            The addClass() method modifies the HTML of a targetted object such that the object will have the specified class (in addition to any/all the objects already had). The reverse is the removeClass() method.
+         </div>
+      </div>
+      
+      <div class="box_before sampleBox">
+         <button class="behaviorButton" id="button_before">
+            display "before" behavior
+         </button>
+         <div class="boxText" id="beforeText">
+            The "before()" method takes its parameter and inserts it before the html of a selected object(s). In this case, the button abov adds the text "HI" before this text.
+         </div>
+      </div>
+      
+      <div class="box_after sampleBox">
+         <button class="behaviorButton" id="button_after">
+            display "after" behavior 
+         </button>
+         <div class="boxText" id="afterText">
+            The "after()" method adds HTML specified as its argument after the specified object. In this case, a <p> object with the word "Hello".
+         </div>
+      </div>
+      
+      <div class="box_append sampleBox">
+         <div class="behaviorButton" id="button_append">
+            display "append" behavior            
+         </div>
+         <div class="boxText" id="appendText">
+            Append() is very similar to after() with one major difference. The difference is that after() inserts code after the end of the specified object(s) (after the closing tags). Append() inserts text BEFORE the end of the specified object. To insert after the start of the object, use prepend();
+         </div>
+      </div>
+      
+      <div class="box_html sampleBox">
+         <div class="behaviorButton" id="button_html">
+            display "html" behavior
+         </div>
+         <div class="boxText" id="htmlText">
+            The HTML method can either get html code from an object (if no parameter is given) or sets the HTML of ALL matching objects (the replacement HTML is the parameter for html()).
+         </div>
+      </div>
+
+      <div class="box_attr sampleBox">
+         <div class="behaviorButton" id="button_attr">
+            display "attr" behavior
+         </div>
+         <div class="boxText" id="attrText">
+            attr() is used to either get or set an attribute for a specified object. Keep in mind, this needs to go through the DOM object root for whatever you are modifying. For example, ("style", "background-color: green").  
+         </div>
+      </div>
+
+      <div class="box_val sampleBox">
+         <div class="behaviorButton" id="button_val">
+            display "val" behavior
+         </div>
+         <div class="boxText" id="valText">
+            Val() is the same kind of method as attr() and HTML(), instead focussing on the "value" of something else. (Confirmed to work for entries in forms/inputs.)
+            <p id="valTestBox">button will fill --> <input type="text" name="entry"></p>
+         </div>
+
+      </div>
+      
+      <div class="box_text sampleBox">
+         <div class="behaviorButton" id="button_text">
+            display "text" behavior
+         </div>
+         <div class="boxText" id="textText">
+            text() will get or set the text of objects
+         </div>
+      </div>
+      
+      <div class="box_data sampleBox">
+         <div class="behaviorButton" id="button_data1">   
+            attach the data to the alert
+         </div>
+         <div class="behaviorButton" id="button_data2">   
+            display alert
+         </div>
+         <div class="boxText" id="dataText">
+            data will change the value of specified variables within JS objects
+         </div>
+      </div>
+   </body>
+</html>

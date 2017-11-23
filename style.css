@@ -1,0 +1,34 @@
+
+
+.sampleBox{
+	display: block;
+	width: 500px;
+	min-height: 250px;
+	background-color: #e4e4e4;
+	padding: 7px;
+	border: solid 5px black;
+ 	margin-bottom: -5px;
+ 	margin-left: 30%;
+	margin-right: 30%;
+	font-weight: normal;
+}
+
+.behaviorButton{
+	display: inline-block;
+	width: 160px;
+	height: 60px;
+	background-color: #297beb;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	border-radius: 15px;
+	text-shadow: 2px 2px black;
+	font-family: sans-serif;
+	padding-top: 5px;
+	vertical-align: top;
+}
+
+.classToBeAdded{
+	color: red;
+	font-weight: bold;	
+}
